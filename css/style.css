@@ -32,28 +32,25 @@ p {
 figure {
     background-color: white;
     border: 4px solid blue;
-    padding: 0;
+    padding: 10px;
     text-align: center;
     border-radius: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     overflow: hidden;
 }
 
+/* CONTROL IMAGE SIZE */
 img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 200px;
+    object-fit: cover;
     border-radius: 0;
 }
 
 figcaption {
-    padding: 8px;
+    margin-top: 6px;
     font-weight: bold;
-    background: rgba(255,255,255,0.9);
 }
+
 
 /* ===============================
    Tablet View — 772px
@@ -65,28 +62,9 @@ figcaption {
         grid-template-columns: 1fr 1fr;
     }
 
+    /* Only the FIGURE becomes circular */
     figure {
-        width: 250px;
-        height: 250px;
-        margin: auto;
         border-radius: 50%;
-    }
-
-    img {
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
-    figcaption {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background: rgba(255,255,255,0.85);
-    }
-
-    figure {
-        position: relative;
     }
 
     figure:last-child {
@@ -94,32 +72,23 @@ figcaption {
     }
 }
 
+
 /* ===============================
    Large Screen View — 992px
    =============================== */
 
 @media (min-width: 992px) {
 
+    /* Everything becomes rectangular again */
     figure {
         border-radius: 0;
-        width: auto;
-        height: auto;
-    }
-
-    img {
-        border-radius: 0;
-        height: auto;
-    }
-
-    figcaption {
-        position: static;
-        background: none;
     }
 
     figure:nth-child(3n) {
         grid-column: 1 / -1;
     }
 }
+
 
 /* ===============================
    Reduced Motion
