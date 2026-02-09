@@ -1,140 +1,127 @@
-/* ===============================
-   Mobile First Base Styles
-   =============================== */
-
-html {
-    scroll-behavior: smooth;
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #dedede;
-    margin: 10px;
-    font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
 }
 
-h1 {
-    text-align: center;
+/* Skip to content link (accessibility) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-p {
-    line-height: 1.6;
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  margin: 10px;
 }
 
+/* Header */
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+}
 
-/* ===== Grid Layout ===== */
+header h1 {
+  margin-bottom: 5px;
+}
 
+/* Main Container */
+main {
+  max-width: 1100px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro Section */
+.intro {
+  margin-bottom: 30px;
+}
+
+.intro p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Grid Layout for Images */
 .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-figure {
-    background-color: white;
-    border: 4px solid blue;
-    outline: 4px solid black;
-    outline-offset: 0;
-    padding: 10px;
-    text-align: center;
-    border-radius: 0;
+/* Color Cards */
+.color-card {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* IMAGE */
-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.color-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Circle Images */
+.color-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  border: 4px solid #333;
+}
+
+/* Captions */
 figcaption {
-    margin-top: 6px;
-    font-weight: bold;
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 1.1rem;
 }
 
+/* Example Color Classes */
+.red { background: #e53935; }
+.orange { background: #fb8c00; }
+.yellow { background: #fdd835; }
+.green { background: #43a047; }
+.blue { background: #1e88e5; }
+.purple { background: #8e24aa; }
 
-/* ===============================
-   Tablet View — 772px
-   =============================== */
-
-@media (min-width: 772px) {
-
-    .grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    figure {
-        border-radius: 50%;
-        aspect-ratio: 1 / 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    img {
-        border-radius: 50%;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    figcaption {
-        margin-top: 8px;
-    }
-
-    figure:last-child {
-        grid-column: 1 / -1;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  background: #222;
+  color: #fff;
+  margin-top: 30px;
 }
 
-
-
-/* ===============================
-   Large Screen View — 992px
-   =============================== */
-
-@media (min-width: 992px) {
-
-    figure {
-        border-radius: 0;
-        aspect-ratio: auto;
-    }
-
-    img {
-        border-radius: 0;
-        width: 100%;
-    }
-
-    figure:nth-child(3n) {
-        grid-column: 1 / -1;
-    }
-}
-
-
-
-/* ===============================
-   Reduced Motion
-   =============================== */
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-
-/* ===============================
-   Dark Mode
-   =============================== */
-
-@media (prefers-color-scheme: dark) {
-
-    body {
-        background-color: #121212;
-        color: white;
-    }
-
-    figure {
-        background-color: #2a2a2a;
-        color: #ffeb3b;
-        border-color: black;
-    }
-}
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .color-circle {
+    width: 180px;
+    height:
