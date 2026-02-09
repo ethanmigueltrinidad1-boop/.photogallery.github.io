@@ -1,5 +1,5 @@
 /* ===============================
-   Mobile First Base Styles
+   Base Styles — Mobile First
    =============================== */
 
 html {
@@ -7,10 +7,9 @@ html {
 }
 
 body {
-    background-color: #dedede;
     margin: 10px;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    background-color: #dedede;
 }
 
 h1 {
@@ -18,13 +17,12 @@ h1 {
 }
 
 p {
-    max-width: 900px;
-    margin: 10px auto;
     line-height: 1.6;
+    margin: 10px auto;
 }
 
 
-/* ===== GRID CONTAINER ===== */
+/* ===== GRID LAYOUT ===== */
 
 .grid {
     display: grid;
@@ -32,9 +30,8 @@ p {
     gap: 10px;
 }
 
-
 figure {
-    background-color: white;
+    background-color: #ffffff;
     border: 4px solid blue;
     padding: 10px;
     text-align: center;
@@ -53,7 +50,7 @@ figcaption {
 
 
 /* ===============================
-   Tablet View – 772px
+   Tablet View — 772px
    =============================== */
 
 @media (min-width: 772px) {
@@ -73,7 +70,7 @@ figcaption {
 
 
 /* ===============================
-   Desktop View – 992px
+   Large Screen View — 992px
    =============================== */
 
 @media (min-width: 992px) {
