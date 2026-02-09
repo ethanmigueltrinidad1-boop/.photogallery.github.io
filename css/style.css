@@ -62,20 +62,20 @@ figcaption {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Perfect circle figures */
     figure {
+        width: 250px;
+        height: 250px;
+        margin: auto;
         border-radius: 50%;
-        aspect-ratio: 1 / 1;
+        overflow: hidden;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
 
-    /* Perfect circle images */
     img {
         width: 100%;
         height: 100%;
-        aspect-ratio: 1 / 1;
         object-fit: cover;
         border-radius: 50%;
     }
