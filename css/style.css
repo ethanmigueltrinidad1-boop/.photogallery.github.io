@@ -20,7 +20,6 @@ p {
     line-height: 1.6;
 }
 
-
 /* ===== Grid Layout ===== */
 
 .grid {
@@ -34,14 +33,16 @@ figure {
     border: 4px solid blue;
     padding: 10px;
     text-align: center;
-    border-radius: 0;
+    border-radius: 50%; /* circular cards on mobile */
+    overflow: hidden;
 }
 
-/* IMAGES MUST ALWAYS BE RECTANGULAR */
+/* MOBILE: images must fit in a circle */
 img {
     width: 100%;
-    height: auto;
-    border-radius: 0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 figcaption {
@@ -60,11 +61,6 @@ figcaption {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Only the FIGURE becomes circular */
-    figure {
-        border-radius: 50%;
-    }
-
     figure:last-child {
         grid-column: 1 / -1;
     }
@@ -77,11 +73,18 @@ figcaption {
 
 @media (min-width: 992px) {
 
-    /* Everything becomes rectangular again */
+    /* figures become rectangular */
     figure {
         border-radius: 0;
     }
 
+    /* images become rectangular */
+    img {
+        border-radius: 0;
+        aspect-ratio: auto;
+    }
+
+    /* every third figure spans two columns */
     figure:nth-child(3n) {
         grid-column: 1 / -1;
     }
