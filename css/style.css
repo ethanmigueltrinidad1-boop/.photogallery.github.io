@@ -58,17 +58,33 @@ figcaption {
 
 @media (min-width: 772px) {
 
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
     figure {
-        aspect-ratio: auto;   /* let captions add height */
-        height: auto;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     img {
-        aspect-ratio: 1 / 1;
         border-radius: 50%;
-        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    figcaption {
+        margin-top: 8px;
+    }
+
+    figure:last-child {
+        grid-column: 1 / -1;
     }
 }
+
 
 
 /* ===============================
