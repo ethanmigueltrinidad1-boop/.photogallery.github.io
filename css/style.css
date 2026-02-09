@@ -93,22 +93,21 @@ figcaption {
 
 @media (min-width: 992px) {
 
-    /* Everything becomes rectangular again */
     figure {
         border-radius: 0;
         aspect-ratio: auto;
-        padding: 10px;
     }
 
     img {
         border-radius: 0;
-        aspect-ratio: auto;
+        width: 100%;
     }
 
     figure:nth-child(3n) {
         grid-column: 1 / -1;
     }
 }
+
 
 
 /* ===============================
