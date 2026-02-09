@@ -62,21 +62,28 @@ figcaption {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* FIGURES become circular */
+    /* Perfect circle figures */
     figure {
         border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    /* Images stay rectangular but fit circle */
+    /* Perfect circle images */
     img {
-        height: 220px;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
     }
 
     figure:last-child {
         grid-column: 1 / -1;
     }
 }
-
 
 /* ===============================
    Large Screen View — 992px
