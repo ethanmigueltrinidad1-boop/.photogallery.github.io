@@ -1,23 +1,40 @@
-/* ===== Mobile First ===== */
+/* ===============================
+   Mobile First Base Styles
+   =============================== */
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    background-color: #dedede;
     margin: 10px;
     font-family: Arial, sans-serif;
-    background-color: #dedede;
+    font-size: 18px;
 }
 
-.gallery {
+h1 {
+    text-align: center;
+}
+
+p {
+    max-width: 900px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+
+/* ===== GRID CONTAINER ===== */
+
+.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
 }
 
+
 figure {
-    background-color: #ffffff;
+    background-color: white;
     border: 4px solid blue;
     padding: 10px;
     text-align: center;
@@ -35,11 +52,13 @@ figcaption {
 }
 
 
-/* ===== Tablet – 772px ===== */
+/* ===============================
+   Tablet View – 772px
+   =============================== */
 
 @media (min-width: 772px) {
 
-    .gallery {
+    .grid {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -53,7 +72,9 @@ figcaption {
 }
 
 
-/* ===== Desktop – 992px ===== */
+/* ===============================
+   Desktop View – 992px
+   =============================== */
 
 @media (min-width: 992px) {
 
@@ -67,7 +88,9 @@ figcaption {
 }
 
 
-/* ===== Reduced Motion ===== */
+/* ===============================
+   Reduced Motion
+   =============================== */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -76,17 +99,19 @@ figcaption {
 }
 
 
-/* ===== Dark Mode ===== */
+/* ===============================
+   Dark Mode
+   =============================== */
 
 @media (prefers-color-scheme: dark) {
 
     body {
-        background-color: #111;
+        background-color: #121212;
         color: #ffffff;
     }
 
     figure {
-        background-color: #222;
+        background-color: #222222;
         color: #ffeb3b;
         border-color: black;
     }
