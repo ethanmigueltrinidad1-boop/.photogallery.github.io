@@ -1,35 +1,126 @@
-html{
+/* ===============================
+   Base Styles – Mobile First
+   =============================== */
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #dedede;
-    padding: 5px;
-    margin: 15px;
-    font-size: 25px;
-    font-family:Arial, sans-serif;
+    padding: 8px;
+    margin: 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 h1 {
     text-align: center;
-    font-family:Arial, sans-serif;
-    font-size: 1.95em;
+    font-size: 1.9em;
 }
 
-h2{
-    text-align:center;
-  }
-
-li{
-    margin-top: 20px;
+h2 {
+    text-align: center;
 }
 
-img{
+li {
+    margin-top: 15px;
+}
+
+img {
     border: 5px solid blue;
-    border-radius: 35px;
+    border-radius: 25px;
     width: 100%;
-  }
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
 
-.label{
+.label {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* ===============================
+   Tablet View
+   =============================== */
+
+@media (min-width: 600px) {
+    body {
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    ul {
+        max-width: 90%;
+        margin: auto;
+    }
+}
+
+
+/* ===============================
+   Large Screen / Desktop View
+   =============================== */
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: auto;
+        font-size: 22px;
+    }
+
+    img {
+        width: 60%;
+    }
+
+    ul {
+        max-width: 70%;
+        margin: auto;
+    }
+}
+
+
+/* ===============================
+   Reduced Motion Preferences
+   =============================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* ===============================
+   Dark Mode Preferences
+   =============================== */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f1f1f1;
+    }
+
+    h1, h2 {
+        color: #ffffff;
+    }
+
+    img {
+        border-color: #00aaff;
+    }
+
+    a {
+        color: #66b2ff;
+    }
 }
