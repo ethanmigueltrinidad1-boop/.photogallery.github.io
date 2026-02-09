@@ -58,27 +58,15 @@ figcaption {
 
 @media (min-width: 772px) {
 
-    .grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Keep figure rectangular so captions remain visible */
     figure {
-        padding: 10px;
-        border-radius: 0;
-        aspect-ratio: auto;
-        overflow: visible;
+        aspect-ratio: auto;   /* let captions add height */
+        height: auto;
     }
 
-    /* Make only the image a perfect circle */
     img {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-        object-fit: cover;
-    }
-
-    figure:last-child {
-        grid-column: 1 / -1;
+        display: block;
     }
 }
 
