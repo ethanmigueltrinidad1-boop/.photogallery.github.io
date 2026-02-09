@@ -40,12 +40,11 @@ figure {
     overflow: hidden;
 }
 
-/* CONTROL IMAGE SIZE */
+/* IMAGE FILLS CONTAINER */
 img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 0;
 }
 
 figcaption {
@@ -64,8 +63,15 @@ figcaption {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Only the FIGURE becomes circular */
+    /* Make the figure a perfect circle */
     figure {
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        padding: 0;              /* important so the image touches edges */
+    }
+
+    /* Match the image to the circle */
+    img {
         border-radius: 50%;
     }
 
@@ -83,6 +89,12 @@ figcaption {
 
     /* Everything becomes rectangular again */
     figure {
+        border-radius: 0;
+        aspect-ratio: auto;
+        padding: 10px;
+    }
+
+    img {
         border-radius: 0;
     }
 
